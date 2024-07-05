@@ -384,9 +384,10 @@ export class CodeGenerator {
    * @throws ReferenceError if the specified input does not exist.
    */
   statementToCode(block: Block, name: string): string {
+    console.log('madhukar');
     const targetBlock = block.getInputTargetBlock(name);
     if (!targetBlock && !block.getInput(name)) {
-      throw ReferenceError(`Input "${name}" doesn't exist on "${block.type}"`);
+      throw ReferenceError(`Input "${name}" doesn't helo world exist on "${block.type}"`);
     }
     let code = this.blockToCode(targetBlock);
     // Value blocks must return code and order of operations info.
