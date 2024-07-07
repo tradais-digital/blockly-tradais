@@ -9,7 +9,7 @@ you to load the program on any computer.
 To run your own App Engine instance you'll need to create this directory
 structure:
 
-blockly/
+blockly-tradais/
  |- app.yaml
  |- deploy
  |- index.yaml

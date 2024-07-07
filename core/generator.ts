@@ -267,6 +267,7 @@ export class CodeGenerator {
     // argument to func.call, which becomes the first parameter to the
     // generator.
     let code = func.call(block, block, this);
+    //? funciton goes to valuetocode if conditional statement , if its a variable it goes to getVariableName to getName;- both in the same file but from getName goes to getName in names.ts.
     if (Array.isArray(code)) {
       // Value blocks return tuples of code and operator order.
       if (!block.outputConnection) {
@@ -384,7 +385,6 @@ export class CodeGenerator {
    * @throws ReferenceError if the specified input does not exist.
    */
   statementToCode(block: Block, name: string): string {
-    console.log('madhukar');
     const targetBlock = block.getInputTargetBlock(name);
     if (!targetBlock && !block.getInput(name)) {
       throw ReferenceError(`Input "${name}" doesn't helo world exist on "${block.type}"`);
@@ -539,6 +539,7 @@ export class CodeGenerator {
   }
 
   private getName(nameOrId: string, type: NameType): string {
+// nameDb_ is reference to names.ts
     if (!this.nameDB_) {
       throw new Error(
         'Name database is not defined. You must initialize `nameDB_` in your generator class and call `init` first.',

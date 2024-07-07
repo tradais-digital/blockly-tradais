@@ -3,7 +3,7 @@ runtime: python312
 handlers:
 # Redirect obsolete URLs.
 # Blockly files moved from /blockly to /static on 5 Dec 2012.
-- url: /blockly/.*
+- url: /blockly-tradais/.*
   static_files: redirect.html
   upload: redirect.html
 # Code, Maze and Turtle moved from demos on 29 Dec 2012.

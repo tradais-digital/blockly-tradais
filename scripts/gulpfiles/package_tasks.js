@@ -51,17 +51,17 @@ function packageIndex() {
   return gulp.src('scripts/package/index.js')
     .pipe(packageUMD('Blockly', [{
         name: 'Blockly',
-        amd: 'blockly/core',
-        cjs: 'blockly/core',
+        amd: 'blockly-tradais/core',
+        cjs: 'blockly-tradais/core',
       },{
         name: 'en',
-        amd: 'blockly/msg/en',
-        cjs: 'blockly/msg/en',
+        amd: 'blockly-tradais/msg/en',
+        cjs: 'blockly-tradais/msg/en',
         global: 'Blockly.Msg',
       },{
         name: 'blocks',
-        amd: 'blockly/blocks',
-        cjs: 'blockly/blocks',
+        amd: 'blockly-tradais/blocks',
+        cjs: 'blockly-tradais/blocks',
         global: 'Blockly.Blocks',
       }]))
     .pipe(gulp.dest(RELEASE_DIR));
