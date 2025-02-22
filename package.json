@@ -1,6 +1,6 @@
 {
   "name": "blockly-tradais",
-  "version": "0.0.3",
+  "version": "0.0.8",
   "description": "Blockly is a library for building visual programming editors.",
   "keywords": [
     "blockly"
